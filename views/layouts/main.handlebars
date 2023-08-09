@@ -4,16 +4,18 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Blog It Here</title>
+    <title>Blog IT Here</title>
     <!-- Custom CSS link -->
-    <link rel="stylesheet" href="../../public/css/style.css">
+    <link rel="stylesheet" href="/css/style.css">
 </head>
 
 <body>
     <header>
         <div>
-            <p>Welcome, {{firstName}}!</p>
-            <a href="/">Blog It!</a>
+            <h1>Blog IT Here</h1>
+        </div>
+        <div>
+                <a href="/">Blog It!</a>
             <ul>
                 <a href="/">Home</a>
                 {{#if logged_in}}
@@ -32,7 +34,9 @@
         {{{body}}}
     </main>
     <footer>
-
+        <div>
+            <h4>&copy; 2023 Blog IT Here. All rights reserved.</h4>
+        </div>
     </footer>
 
 </body>

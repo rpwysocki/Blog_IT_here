@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blog It Here</title>
+    <!-- Custom CSS link -->
+    <link rel="stylesheet" href="../../public/css/style.css">
+</head>
+
+<body>
+    <header>
+        <div>
+            <p>Welcome, {{firstName}}!</p>
+            <a href="/">Blog It!</a>
+            <ul>
+                <a href="/">Home</a>
+                {{#if logged_in}}
+                <a href="/dashboard">Dashboard</a>
+                <button id="logout">Logout</button>
+                {{else}}
+                <a href="/register">Register</a>
+                <a href="/login">Login</a>
+                {{/if}}
+            </ul>
+        </div>
+        </nav>
+
+    </header>
+    <main>
+        {{{body}}}
+    </main>
+    <footer>
+
+    </footer>
+
+</body>
+
+</html>

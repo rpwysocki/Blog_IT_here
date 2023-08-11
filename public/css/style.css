@@ -1,0 +1,14 @@
+header {
+    background-color: #777;
+    padding: 4px 3%;
+
+}
+
+a {
+    justify-content: right;
+    margin-right: 5px;
+}
+
+a:last-child {
+    margin-right: 0px;
+}

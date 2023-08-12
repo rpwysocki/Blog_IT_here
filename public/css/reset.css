@@ -1,0 +1,41 @@
+/* CSS Reset */
+
+/* Remove default margin and padding */
+body, h1, h2, h3, h4, h5, h6, p, ul, ol, li {
+    margin: 0;
+    padding: 0;
+  }
+  
+  /* Set box-sizing to border-box for all elements */
+  *, *::before, *::after {
+    box-sizing: border-box;
+  }
+  
+  /* Remove list styles */
+  ul, ol {
+    list-style: none;
+  }
+  
+  /* Remove anchor text decoration */
+  a {
+    text-decoration: none;
+  }
+  
+  /* Reset form elements */
+  button, input, select, textarea {
+    margin: 0;
+    padding: 0;
+    border: none;
+    background: none;
+    font-family: inherit;
+    font-size: inherit;
+    color: inherit;
+    appearance: none;
+    outline: none;
+  }
+  
+  /* Set a baseline font size and family */
+  body {
+    font-family: Arial, sans-serif;
+    font-size: 16px;
+  }

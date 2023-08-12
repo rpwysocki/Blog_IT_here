@@ -17,10 +17,6 @@ Post.init(
             allowNull: false,
             defaultValue: DataTypes.NOW,
         },
-        city: {
-            type: DataTypes.STRING,
-            allowNull: false,
-        },
     },
     {
         sequelize: db,

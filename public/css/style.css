@@ -1,68 +1,30 @@
-/* CSS Reset */
-
-/* Remove default margin and padding */
-body, h1, h2, h3, h4, h5, h6, p, ul, ol, li {
-    margin: 0;
-    padding: 0;
-  }
-  
-  /* Set box-sizing to border-box for all elements */
-  *, *::before, *::after {
-    box-sizing: border-box;
-  }
-  
-  /* Remove list styles */
-  ul, ol {
-    list-style: none;
-  }
-  
-  /* Remove anchor text decoration */
-  a {
-    text-decoration: none;
-  }
-  
-  /* Reset form elements */
-  button, input, select, textarea {
-    margin: 0;
-    padding: 0;
-    border: none;
-    background: none;
-    font-family: inherit;
-    font-size: inherit;
-    color: inherit;
-    appearance: none;
-    outline: none;
-  }
-  
-  /* Set a baseline font size and family */
-  body {
-    font-family: Arial, sans-serif;
-    font-size: 16px;
-  }
-
 
 /* Global style */
 header {
-    background-color: #a5a3a3;
+    text-align: center;
+    background-color: #5d82ae;
     color: white;
     padding: 4px 3%;
+    font-family: 'Share Tech', sans-serif;
 
 }
 
 main {
+    font-family: 'Share Tech', sans-serif;
+    color: white;
     padding: 4px 3%;
 }
 
 footer {
     /* Push the footer to the bottom */
-    position: fixed;
-    left: 0;
+    position: absolute;
     bottom: 0;
     width: 100%;
     text-align: center;
-    background-color: #a5a3a3;
+    background-color: #5d82ae;
     padding: 4px;
     color: white;
+    font-family: 'Share Tech', sans-serif;
 }
 
 
@@ -74,28 +36,39 @@ footer {
 } */
 
 /* Style the links inside the navigation bar */
-a {
+header a {
   float: left;
-  color: #f2f2f2;
+  color: white;
   text-align: center;
   padding: 14px 16px;
   text-decoration: none;
-  font-size: 17px;
+  font-size: 17px
 }
 
 /* Change the color of links on hover */
-a:hover {
+header a:hover {
   background-color: #ddd;
+  border-radius: 25px;
   color: black;
 }
 
 /* Add a color to the active/current link */
-a.active {
+header a.active {
   background-color: #9c776d;
   color: white;
 }
 
 /* Right-aligned section inside the top navigation */
-.nav {
+header .nav {
   float: right;
 }
+
+main {
+  background-image: url(../assets/background.jpg);
+  background-color: #cccccc; /* Used if the image is unavailable */
+  
+  background-position: center; /* Center the image */
+  background-repeat: no-repeat; /* Do not repeat the image */
+  background-size: cover; /* Resize the background image to cover the entire container */
+}
+

@@ -1,1 +1,30 @@
 <h1>Home</h1>
+
+<h3 class="text-center">
+    Welcome to Blog IT Here, home of the 100% IT blog site!
+</h3>
+
+<div>
+    <p>Login or Register to get started. Once you are logged in please feel free to start a new blog or look over other blogs already posted which you can comment on.
+    </p>
+    <p>
+        Just remember, if it's IT related it does not belong here and will be removed!
+        Thank you and have a great day!
+    </p>
+</div>
+<ul>
+    {{#each posts}}
+  <div class="row">
+    <div class="col">
+      <div class="card">
+        <div class="card-content">
+          <span class="card-title">{{title}}</span>
+          <p class="card-text">{{text}}</p>
+          <p>By: {{user.userName}}</p>
+          <a href="/{{id}}">View Post</a>
+        </div>
+      </div>
+    </div>
+  </div>
+  {{/each}}
+  </ul>

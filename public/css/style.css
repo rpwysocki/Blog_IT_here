@@ -55,7 +55,7 @@ header a:hover {
 /* Add a color to the active/current link */
 header a.active {
   background-color: #9c776d;
-  color: white;
+  color: red;
 }
 
 /* Right-aligned section inside the top navigation */

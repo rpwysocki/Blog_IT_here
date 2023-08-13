@@ -23,11 +23,11 @@
             <ul>
                 <a href="/">Home</a>
                 {{#if logged_in}}
-                <a href="/dashboard">Dashboard</a>
+                <a href="../dashboard.handlebars">Dashboard</a>
                 <button id="logout">Logout</button>
                 {{else}}
-                <a href="/register">Register</a>
-                <a href="/login">Login</a>
+                <a href="../register.handlebars">Register</a>
+                <a href="../login.handlebars">Login</a>
                 {{/if}}
             </ul>
         </nav>

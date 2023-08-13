@@ -1,1 +1,24 @@
-<h1>Login</h1>
+<div class="login-container">
+    <form action="/login" method="POST">
+
+        <h1>User Login</h1>
+
+
+        <label for="username">Username:</label>
+        <input name="username" type="text" id="username" placeholder="Enter user name" required minlength="3">
+
+
+        <label for="password">Password:</label>
+        <input name="password" type="password" id="password" placeholder="Enter password" required minlength="6">
+        {{#if error}}
+        <p class="error-message">{{ error }}</p>
+        {{/if}}
+
+
+        <button>Sign In</button>
+
+
+        <p class="d-flex justify-content-center align-items-center">Not a member?&nbsp;<a href="/register"
+                id="create-button">Create Account</a></p>
+    </form>
+</div>

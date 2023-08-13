@@ -6,37 +6,12 @@ const db = require("../config/connection");
 class User extends Model { }
 
 User.init({
-    firstName: {
-        type: DataTypes.STRING,
-        allowNull: false,
-        validate: {
-            notEmpty: true,
-            min: 2,
-        }
-    },
-    lastName: {
+    userName: {
         type: DataTypes.STRING,
         allowNull: false,
         validate: {
             notEmpty: true,
             min: 3,
-        }
-    },
-    username: {
-        type: DataTypes.STRING,
-        unique: true,
-        allowNull: false,
-        validate: {
-            notEmpty: true,
-            min: 3,
-        }
-    },
-    email: {
-        type: DataTypes.STRING,
-        unique: true,
-        allowNull: false,
-        validate: {
-            isEmail: true
         }
     },
     password: {
@@ -58,14 +33,14 @@ User.init({
     },
 });
 
-User.prototype.validatePass = async function (formPassword) {
-    const isValid = await compare(formPassword, this.password);
+// User.prototype.validatePass = async function (formPassword) {
+//     const isValid = await compare(formPassword, this.password);
 
-    return isValid;
-}
+//     return isValid;
+// }
 
 
-User.hasMany(Post);
-Post.belongsTo(User);
+// User.hasMany(Post);
+// Post.belongsTo(User);
 
 module.exports = User;

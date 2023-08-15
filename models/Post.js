@@ -5,6 +5,10 @@ class Post extends Model { }
 
 Post.init(
     {
+        title: {
+            type: DataTypes.STRING,
+            allowNull: false,
+        },
         text: {
             type: DataTypes.STRING,
             allowNull: false,
@@ -12,11 +16,11 @@ Post.init(
                 min: 3,
             },
         },
-        date: {
-            type: DataTypes.DATE,
-            allowNull: false,
-            defaultValue: DataTypes.NOW,
-        },
+        // date: {
+        //     type: DataTypes.DATE,
+        //     allowNull: false,
+        //     defaultValue: DataTypes.NOW,
+        // },
     },
     {
         sequelize: db,

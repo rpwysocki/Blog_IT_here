@@ -33,14 +33,6 @@ User.init({
     },
 });
 
-// User.prototype.validatePass = async function (formPassword) {
-//     const isValid = await compare(formPassword, this.password);
 
-//     return isValid;
-// }
-
-
-// User.hasMany(Post);
-// Post.belongsTo(User);
 
 module.exports = User;

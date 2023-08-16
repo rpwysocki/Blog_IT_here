@@ -2,7 +2,7 @@ const deletePost = async function () {
     try {
         const hiddenInput = document.getElementById('hidden-input');
         const postId = hiddenInput.value;
-        const response = await fetch(`/api/posts/${postId}`, {
+        const response = await fetch(`/api/post/${postId}`, {
             method: 'DELETE',
         });
         if (response.ok) {

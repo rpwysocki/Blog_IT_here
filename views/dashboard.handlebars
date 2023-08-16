@@ -1,39 +1,43 @@
 <h1>Dashboard</h1>
 
-<h6 class="align-center">Create a new post:</h6>
-<form id="postForm" class="center-container">
-    <h6>Title</h6>
+<h4 class="align-center">Create a new post:</h4>
+<form id="postForm" class="center-container bottom">
+    <h5>Title</h5>
     <div>
-        <textarea class="title-input" name="title" type="text" placeholder="Title" id="title"></textarea>
+        <textarea class="title-input bg input" name="title" type="text" placeholder="Title" id="title"></textarea>
     </div>
-    <h6>Text</h6>
+    <h5>Text</h5>
     <div>
-        <textarea class="text-input" name="text" type="text" placeholder="Write your post" rows="10"
+        <textarea class="text-input bg input" name="text" type="text" placeholder="Write your post" rows="5" cols="100"
             id="text"></textarea>
     </div>
     <div>
-        <button id="confirmBtn" type="submit">Add post</button>
+        <h5>
+            <button id="confirmBtn" type="submit">Add post</button>
+        </h5>
     </div>
 </form>
 
-{{#if posts.length}}
-<div class="col-md-6 project-list">
-    <h4>Your Posts:</h4>
+<h4 class="bottom">Your Posts:</h4>
 
-    <ul class="article-ul">
-        {{#each posts}}
-        <div>
-            <input type="hidden" id="hidden-input" value="{{id}}">
-            <h4>{{title}}</h4>
-            <p>{{text}}</p>
-            <button id="deleteBtn">Delete</button>
+<ul>
+    {{#if posts.length}}
+    {{#each posts}}
+    <div class="post">
+        <div class="card">
+            <div class="card-content">
+                <input type="hidden" id="hidden-input" value="{{id}}">
+                <h4>{{title}}</h4>
+                <p>{{text}}</p>
+                <button id="deleteBtn">Delete</button>
+            </div>
         </div>
 
-</div>
+    </div>
+    </div>
+    {{/each}}
+    {{/if}}
 </ul>
-{{/each}}
-</div>
-{{/if}}
 
 
 <script src="/js/addPost.js"></script>

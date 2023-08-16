@@ -22,7 +22,6 @@ Post.init(
                 min: 3,
             },
         },
-
         // date: {
         //     type: DataTypes.DATE,
         //     allowNull: false,
@@ -32,7 +31,7 @@ Post.init(
     {
         sequelize: db,
         modelName: "post",
-        
+
     }
 );
 

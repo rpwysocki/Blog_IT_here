@@ -8,14 +8,19 @@ const auth = require('../utils/auth');
 router.get('/', async (req, res) => {
     try {
         const postData = await Post.findAll({
-            include: [
-                {
-                    model: User,
-                    attributes: ['userName']
-                }
-            ]
-        });
+            // where:{
+            //     user_id: req.session.user_id
+            // }
 
+            
+            // } [
+                //     {
+                    //         model: User,
+                    //         attributes: ['userName']
+                    //     }
+                    // ]
+                    
+                });
         const posts = postData.map((post) => post.get({ plain: true }));
 
         res.render('index', {
@@ -25,19 +30,20 @@ router.get('/', async (req, res) => {
             logged_in: req.session.logged_in
         });
     } catch (err) {
+        console.log(err)
         res.status(500).json(err);
     }
 });
 
 router.get('/login', (req, res) => {
     res.render('login', {
-        layout: 'login'
+       
     })
 });
 
 router.get('/register', (req, res) => {
     res.render('register', {
-        layout: 'register'
+        
     })
 });
 

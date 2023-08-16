@@ -2,7 +2,7 @@ const postFormSubmit = async (e) => {
     e.preventDefault()
     const title = document.getElementById('title')
     const text = document.getElementById('text')
-    const response = await fetch('/api/posts/', {
+    const response = await fetch('/api/posts', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({

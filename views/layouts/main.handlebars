@@ -5,6 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Blog IT Here</title>
+    {{!-- <link rel="shortcut icon" href="#"> --}}
     <link rel="stylesheet" href="/css/reset.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -23,11 +24,11 @@
             <ul>
                 <a href="/">Home</a>
                 {{#if logged_in}}
-                <a href="../dashboard.handlebars">Dashboard</a>
+                <a href="/dashboard">Dashboard</a>
                 <button id="logout">Logout</button>
                 {{else}}
-                <a href="../register.handlebars">Register</a>
-                <a href="../login.handlebars">Login</a>
+                <a href="/register">Register</a>
+                <a href="/login">Login</a>
                 {{/if}}
             </ul>
         </nav>

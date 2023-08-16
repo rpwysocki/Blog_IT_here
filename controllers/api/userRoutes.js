@@ -29,18 +29,19 @@ router.post('/login', async (req, res) => {
     }
 });
 
-router.post('/', async (req, res) => {
+router.post('/register', async (req, res) => {
     try {
         const newUser = await User.create({
-            userName: req.body.userName,
+            userName: req.body.username,
             password: req.body.password
         });
         req.session.save(() => {
             req.session.user_id = newUser.id;
             req.session.logged_in = true;
-            res.json(newUser);
+            res.redirect('/dashboard');
         });
     } catch (err) {
+        console.log(err)
         res.status(500).json({ message: 'Username already exists' })
     }
 });

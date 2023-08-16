@@ -1,1 +1,40 @@
 <h1>Dashboard</h1>
+
+<h6 class="align-center">Create a new post:</h6>
+<form id="postForm" class="center-container">
+    <h6>Title</h6>
+    <div>
+        <textarea class="title-input" name="title" type="text" placeholder="Title" id="title"></textarea>
+    </div>
+    <h6>Text</h6>
+    <div>
+        <textarea class="text-input" name="text" type="text" placeholder="Write your post" rows="10"
+            id="text"></textarea>
+    </div>
+    <div>
+        <button id="confirmBtn" type="submit">Add post</button>
+    </div>
+</form>
+
+{{#if posts.length}}
+<div class="col-md-6 project-list">
+    <h4>Your Posts:</h4>
+
+    <ul class="article-ul">
+        {{#each posts}}
+        <div>
+            <input type="hidden" id="hidden-input" value="{{id}}">
+            <h4>{{title}}</h4>
+            <p>{{text}}</p>
+            <button id="deleteBtn">Delete</button>
+        </div>
+
+</div>
+</ul>
+{{/each}}
+</div>
+{{/if}}
+
+
+<script src="/js/addPost.js"></script>
+<script src="/js/delete.js"></script>

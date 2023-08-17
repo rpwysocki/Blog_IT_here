@@ -1,5 +1,5 @@
 <div class="login-container">
-    <form action="/login" method="POST">
+    <form id="login_form">
 
         <h1>User Login</h1>
 
@@ -10,15 +10,16 @@
 
         <label for="password">Password:</label>
         <input name="password" type="password" id="password" placeholder="Enter password" required minlength="6">
-        {{#if error}}
+        {{!-- {{#if error}}
         <p class="error-message">{{ error }}</p>
-        {{/if}}
+        {{/if}} --}}
 
 
         <button>Sign In</button>
 
 
-        <p class="d-flex justify-content-center align-items-center">Not a member?&nbsp;<a href="/register"
+        <p class="d-flex justify-content-center align-items-center">Not a member?<a href="/register"
                 id="create-button">Create Account</a></p>
     </form>
 </div>
+<script src="/js/login.js"></script>

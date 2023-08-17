@@ -2,7 +2,8 @@ const loginFormSubmit = async (e) => {
     e.preventDefault()
     const username = document.getElementById('username')
     const password = document.getElementById('password')
-    const response = await fetch('/api/users/login', {
+    console.log(username.value, password.value)
+    const response = await fetch('/api/user/login', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({
@@ -11,7 +12,7 @@ const loginFormSubmit = async (e) => {
         })
     })
     if (response.ok) {
-        document.location.replace('/dashboard')
+        document.location.replace('/')
     } else {
         alert('failed to login!')
     }

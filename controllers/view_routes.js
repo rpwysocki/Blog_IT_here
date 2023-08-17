@@ -8,26 +8,19 @@ const auth = require('../utils/auth');
 router.get('/', async (req, res) => {
     try {
         const postData = await Post.findAll({
-            where:{
-                user_id: req.session.user_id
-            }
+            // where:{
+            //     user_id: req.session.user_id
+            // }
 
-            
-            // } [
-                //     {
-                    //         model: User,
-                    //         attributes: ['userName']
-                    //     }
-                    // ]
-                    
+                               
                 });
         const posts = postData.map((post) => post.get({ plain: true }));
 
         res.render('index', {
             layout: 'main',
             posts,
-            isHome: true,
-            logged_in: req.session.logged_in
+            // isHome: true,
+            // logged_in: req.session.logged_in
         });
     } catch (err) {
         console.log(err)

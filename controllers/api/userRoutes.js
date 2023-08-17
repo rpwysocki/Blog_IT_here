@@ -6,7 +6,7 @@ const { User } = require('../../models');
 
 router.post('/login', async (req, res) => {
     try {
-        const user = await User.findOne({ where: { userName: req.body.userName } });
+        const user = await User.findOne({ where: { userName: req.body.username } });
         if (!user) return res.redirect("/register");
 
         const isValidPass = await user.validatePass(req.body.password);
